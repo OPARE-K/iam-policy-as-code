@@ -18,7 +18,7 @@ resource "aws_iam_role" "app_role" {
 }
 
 resource "aws_iam_policy" "app_policy" {
-  name = "AppReadOnlyPolicy"
+  name   = "AppReadOnlyPolicy"
   policy = file("${path.module}/iam-policy.json")
 }
 
