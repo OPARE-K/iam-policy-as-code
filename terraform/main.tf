@@ -1,6 +1,8 @@
 provider "aws" {
-  region = "us-east-1"
+  region = "us-west-2"
 }
+
+
 
 resource "aws_iam_role" "app_role" {
   name = "app-role"
@@ -25,4 +27,14 @@ resource "aws_iam_policy" "app_policy" {
 resource "aws_iam_role_policy_attachment" "attach" {
   role       = aws_iam_role.app_role.name
   policy_arn = aws_iam_policy.app_policy.arn
+}
+
+terraform {
+  backend "s3" {
+    bucket         = "tf-state-s3backend"
+    key            = "home/kbudden/iam-policy-as-code/terraform.tfstate"
+    region         = "us-west-2"
+    dynamodb_table = "your-lock-table"
+    encrypt        = true
+  }
 }
