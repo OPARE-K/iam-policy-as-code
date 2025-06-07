@@ -34,7 +34,7 @@ terraform {
     bucket         = "tf-state-s3backend"
     key            = "home/kbudden/iam-policy-as-code/terraform.tfstate"
     region         = "us-west-2"
-    dynamodb_table = "your-lock-table"
+    dynamodb_table = "StateLocks"
     encrypt        = true
   }
 }
