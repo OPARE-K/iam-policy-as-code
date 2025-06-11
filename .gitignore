@@ -1,21 +1,4 @@
 .terraform/
 *.tfstate
 *.tfstate.backup
-.terraform.lock.hcl
-
-# Ignore Terraform state files
-*.tfstate
-*.tfstate.backup
-
-# Ignore crash logs
-crash.log
-
-# Ignore the .terraform directory (provider plugins, etc.)
-.terraform/
-
-# Ignore override files
-*.tfvars
-*.tfvars.json
-
-# Ignore sensitive files
-*.pem
+terraform.tfvars
