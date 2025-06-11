@@ -10,7 +10,7 @@ env:
   TF_IN_AUTOMATION: true
   TF_INPUT: false
   TF_LOCK_TIMEOUT: 60s
-  AWS_REGION: us-east-1  # Change to your region
+  AWS_REGION: us-west-2  # Change to your region
 
 jobs:
   terraform:
